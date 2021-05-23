@@ -1,0 +1,35 @@
+body {
+	background-color: #79090e;
+	display: flex;
+	height: 100vh;
+}
+.mobile,.tablet,.pc {
+	margin: auto;
+	font-size: 100px;
+	text-align: center;
+	color: #fff;
+	display: none;
+}
+
+/*mobile: width < 740px */
+@media only screen and (max-width: 739px){
+	.mobile {
+		display: block;
+		color: red;
+	}
+}
+
+/*tablet: width >= 740px and < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1023px){
+	.tablet {
+		display: block;
+		color: pink;
+	}
+}
+
+/*: width > 1024px */
+@media only screen and (min-width: 1024px){
+	.pc {
+		display: block;
+	}
+}
