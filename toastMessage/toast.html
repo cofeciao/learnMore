@@ -6,26 +6,33 @@
 	</title>
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="toast.css">
-
+	<script src="toast.js"></script>
 </head>
 <body>
 	<div id="toast">
-		<div class="toast toast--success">
-		<div class="toast__icon">
-			<i class="fas fa-check-circle"></i>
-		</div>
-		<div class="toast__body">
-			<div class="toast__title">
-				Success	
-			</div>
-			<div class="toast__content">
-			Anyone with access can view your invited visitors
-		</div>
-		</div>
-		<div class="toast__close">
-			<i class="fas fa-times-circle"></i>
-		</div>
 	</div>
+
+	<div class="btn">
+		<button onclick="btnSuccessClick()" class="btn--success">Success</button>
+	<button onclick="btnInfoClick()" class="btn--error">Error</button>
 	</div>
+	
+	<script>
+		function btnSuccessClick () {
+			toast({
+				title: 'Success',
+				message: 'Done',
+				type: 'success',
+			});
+		}
+		function btnInfoClick () {
+			toast({
+				title: 'Info',
+				message: 'This is info',
+				type: 'info',
+			});
+		}
+	</script>
 </body>
+
 </html>
